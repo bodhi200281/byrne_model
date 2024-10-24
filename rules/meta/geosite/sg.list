@@ -1,7 +1,8 @@
 DOMAIN,www.binance.com
+DOMAIN,bin.bnbstatic.com
+DOMAIN,public.bnbstatic.com
 DOMAIN-SUFFIX,bnbstatic.com
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.info
-DOMAIN-KEYWORD,bnbstatic
-DOMAIN-KEYWORD,binance
+
 
