@@ -1,4 +1,10 @@
-DOMAIN-KEYWORD,openai
+DOMAIN,bard.google.com
+DOMAIN,ai.google.dev
+DOMAIN,o33249.ingest.sentry.io @ads
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicom.imgix.net @ads
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN-KEYWORD,notebooklm
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,play-fe
@@ -14,6 +20,7 @@ DOMAIN-SUFFIX,xn–ngstr-cn-8za9o.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,clients.google.com
 DOMAIN-SUFFIX,AI.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,challenges.cloudflare.com
@@ -21,6 +28,7 @@ DOMAIN-SUFFIX,opendns.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
@@ -28,8 +36,6 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,apis.google.com
-DOMAIN,bard.google.com
-DOMAIN,ai.google.dev
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,intercom.io
@@ -44,3 +50,4 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,stripe.com
+^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$
