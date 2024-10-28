@@ -77,4 +77,3 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,stripe.com
-^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$
