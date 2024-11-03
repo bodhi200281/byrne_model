@@ -71,6 +71,7 @@ rule-providers:
   google: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/google.mrs" }
   github: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/github.mrs" }
   netflix: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/netflix.mrs" }
+  twitter: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/twitter.mrs" }
   microsoft: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/microsoft.mrs" }
   cn_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/cn.mrs" }
   cn_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/cn_ip.mrs" }
