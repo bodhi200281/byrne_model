@@ -6,7 +6,7 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    proxy: 🟢 直连
+    proxy: DIRECT
     url: "订阅链接1"
 
 unified-delay: true
@@ -27,11 +27,6 @@ sniffer:
     - "dlg.io.mi.com"
     - "+.push.apple.com"
     - "+.apple.com"
-
-proxies:
-- name: "DIRECT"
-  type: direct
-  udp: true
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
@@ -67,12 +62,10 @@ rule-anchor:
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
-  direct1: { <<: *class, url: "https://raw.githubusercontent.com/qcyhub/rule/master/Direct.list" }
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qcyhub/rule/master/ProxyLite.list" }
-  ai: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.mrs" }
-  youtube_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/youtube.mrs" }
-  google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
+  private: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/private_ip.mrs" }
+  ai: { <<: *domain, url: https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.mrs" }
+  youtube: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/youtube.mrs" }
+  google: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
   github_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/github.mrs" }
   netflix_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/netflix.mrs" }
   microsoft_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/microsoft.mrs" }
