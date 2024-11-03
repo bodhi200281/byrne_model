@@ -37,10 +37,10 @@ proxy-groups:
   - {name: 🇹🇼 台湾, type: load-balance, include-all: true, filter: "(?i)台湾|tw|台|TW"}
   - {name: 🇭🇰 香港, type: load-balance, include-all: true, filter: "(?i)香港|HK|港|hk|hongkong|Hong|Kong"}
   - {name: ⚖️ 负载均衡, type: load-balance, include-all: true}
-  - {name: GLOBAL, type: select, proxies: [🚀 节点选择, ♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
+  - {name: GLOBAL, type: select, proxies: [🚀 节点选择 ♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
 
 rules:
-  - RULE-SET,private,DIRECT
+  - RULE-SET,private_domain,DIRECT
   - RULE-SET,ad,REJECT
   - RULE-SET,ai,🇺🇸 美国
   - RULE-SET,github,🇹🇼 台湾
@@ -62,7 +62,7 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
-  asn: &asn {type: http, interval: 86400, behavior: ipcidr, format: text}
+  asn: &asn {type: http, interval: 86400, behavior: ipasn, format: text}
 
 rule-providers: 
   private: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/private_ip.mrs" }
