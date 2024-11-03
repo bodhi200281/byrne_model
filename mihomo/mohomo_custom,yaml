@@ -36,42 +36,45 @@ proxy-groups:
   - {name: 🇸🇬 新加坡, type: load-balance, include-all: true, filter: "(?i)狮城|sg|singapore|新加坡|新"}
   - {name: 🇹🇼 台湾, type: load-balance, include-all: true, filter: "(?i)台湾|tw|台|TW"}
   - {name: 🇭🇰 香港, type: load-balance, include-all: true, filter: "(?i)香港|HK|港|hk|hongkong|Hong|Kong"}
-  - {name: ⚖️ 负载均衡, type: oad-balance, include-all: true}
+  - {name: ⚖️ 负载均衡, type: load-balance, include-all: true}
+  - {name: GLOBAL, type: select, proxies: [🚀 节点选择 ♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
 rules:
   - RULE-SET,private_domain,DIRECT
-  - RULE-SET,direct1,DIRECT
-  - RULE-SET,proxylite,🚀 节点选择
+  - RULE-SET,ad,REJECT
   - RULE-SET,ai,🇺🇸 美国
-  - RULE-SET,github_domain,🇹🇼 台湾
-  - RULE-SET,youtube_domain,🇭🇰 香港
-  - RULE-SET,google_domain,🇯🇵 日本
-  - RULE-SET,microsoft_domain,DIRECT
-  - RULE-SET,speedtest_domain,🇭🇰 香港
-  - RULE-SET,netflix_domain,🇹🇼 台湾
-  - RULE-SET,paypal_domain,🇭🇰 香港
-  - RULE-SET,geolocation-!cn,🚀 节点选择
+  - RULE-SET,github,🇹🇼 台湾
+  - RULE-SET,youtube,🇭🇰 香港
+  - RULE-SET,google,🇯🇵 日本
+  - RULE-SET,microsoft,DIRECT
+  - RULE-SET,netflix,🇹🇼 台湾
+  - RULE-SET,twitter,🇭🇰 香港
   - RULE-SET,cn_domain,DIRECT
-  - RULE-SET,google_ip,🇭🇰 香港,no-resolve
+  - RULE-SET,google_ip,🇯🇵 日本,no-resolve
   - RULE-SET,netflix_ip,🇹🇼 台湾,no-resolve
-  - RULE-SET,telegram_ip,🚀 节点选择,no-resolve
+  - RULE-SET,twitter_ip,🇭🇰 香港,no-resolve
+  - RULE-SET,asn,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - MATCH,🚀 节点选择
+
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  asn: &asn {type: http, interval: 86400, behavior: ipasn, format: text}
+
 rule-providers: 
   private: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/private_ip.mrs" }
   ai: { <<: *domain, url: https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.mrs" }
   youtube: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/youtube.mrs" }
-  google: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
-  github_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/github.mrs" }
-  netflix_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/netflix.mrs" }
-  microsoft_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/microsoft.mrs" }
-  speedtest_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs" }
-  geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs" }
+  google: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/google.mrs" }
+  github: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/github.mrs" }
+  netflix: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/netflix.mrs" }
+  microsoft: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/microsoft.mrs" }
   cn_domain: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/cn.mrs" }
-  cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs" }
-  google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
-  netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs" }
+  cn_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/cn_ip.mrs" }
+  google_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/google_ip.mrs" }
+  netflix_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/netflix_ip.mrs" }
+  twitter_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/twitter_ip.mrs" }
+  ad: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/category-ads-all.mrs" }
+  asn: { <<: *asn, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/ASN.list"}
