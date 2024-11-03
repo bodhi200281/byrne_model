@@ -53,7 +53,6 @@ rules:
   - RULE-SET,google_ip,🇯🇵 日本,no-resolve
   - RULE-SET,netflix_ip,🇹🇼 台湾,no-resolve
   - RULE-SET,twitter_ip,🇭🇰 香港,no-resolve
-  - RULE-SET,asn,DIRECT
   - RULE-SET,cn_ip,DIRECT
   - MATCH,🚀 节点选择
 
@@ -79,4 +78,4 @@ rule-providers:
   netflix_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/netflix_ip.mrs" }
   twitter_ip: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/twitter_ip.mrs" }
   ad: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/category-ads-all.mrs" }
-  asn: { <<: *asn, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/ASN.list"}
+  
