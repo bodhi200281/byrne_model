@@ -38,6 +38,7 @@ proxy-groups:
   - {name: 🇭🇰 香港, type: load-balance, include-all: true, filter: "(?i)香港|HK|港|hk|hongkong|Hong|Kong"}
   - {name: ⚖️ 负载均衡, type: load-balance, include-all: true}
   - {name: GLOBAL, type: select, proxies: [🚀 节点选择 ♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
+
 rules:
   - RULE-SET,private_domain,DIRECT
   - RULE-SET,ad,REJECT
