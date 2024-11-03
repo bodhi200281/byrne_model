@@ -53,6 +53,7 @@ rules:
   - RULE-SET,google_ip,🇯🇵 日本,no-resolve
   - RULE-SET,netflix_ip,🇹🇼 台湾,no-resolve
   - RULE-SET,twitter_ip,🇭🇰 香港,no-resolve
+  - RULE-SET,cn_domain,DIRECT
   - RULE-SET,cn_ip,DIRECT,no-resolve
   - MATCH,🚀 节点选择
 
