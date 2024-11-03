@@ -64,7 +64,7 @@ rule-anchor:
   asn: &asn {type: http, interval: 86400, behavior: ipcidr, format: text}
 
 rule-providers: 
-  ad: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/category-ads-all.mrs" }
+  ad: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/category-ads-all.mrs" }
   private: { <<: *ip, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geoip/private_ip.mrs" }
   ai: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.mrs" }
   youtube: { <<: *domain, url: "https://rproxy.jokin.uk/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/youtube.mrs" }
