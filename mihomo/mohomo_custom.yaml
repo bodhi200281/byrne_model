@@ -42,6 +42,7 @@ proxy-groups:
 rules:
   - RULE-SET,private,DIRECT
   - RULE-SET,ad,REJECT
+  - DOMAIN-KEWORD,googleapis
   - RULE-SET,ai,🇺🇸 美国
   - RULE-SET,github,🇹🇼 台湾
   - RULE-SET,youtube,🇭🇰 香港
