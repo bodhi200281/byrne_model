@@ -78,8 +78,7 @@ proxy-groups:
 
 rules:
   - GEOIP,category-ads,REJECT,no-resolve
-  - GEOSITE,category-ads,DIRECT
-  - DOMAIN,gh-proxy.com,DIRECT
+  - GEOSITE,category-ads-all,DIRECT
   - RULE-SET,sg,🇸🇬 新加坡
   - GEOSITE,google-registry,🇺🇸 美国
   - GEOSITE,openai,🇺🇸 美国
@@ -104,4 +103,4 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers: 
-  sg: { <<: *domain_text, url: "https://gh-proxy.com/raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
+  sg: { <<: *domain_text, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
