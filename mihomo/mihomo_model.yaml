@@ -7,7 +7,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: DIRECT
-    url: "https://subapi.fxxk.dedyn.io/sub?&url=https%3A%2F%2Flink.dingyueapi.net%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D10295e59d30b90e68fa928ad0262f1fa&target=clash&include=%E9%A6%99%E6%B8%AF%7C%E6%97%A5%E6%9C%AC%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E7%8B%AE%E5%9F%8E%7C%E7%BE%8E%E5%9B%BD%7C%E5%8F%B0%E6%B9%BE&emoji=true&append_type=true&append_info=true&scv=false&udp=true&list=false&sort=false&fdn=false&insert=false"
+    url: "https://api.stentvessel.top/sub?target=clash&clash.doh=true&emoji=true&scv=true&udp=true&new_name=true&filename=YToo_Trojan&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D70001%26token%3D7ZF9RVuvsk9N"
 
 unified-delay: true
 tcp-concurrent: true
@@ -50,7 +50,6 @@ dns:
     - "+.local"
     - "+.market.xiaomi.com"
     - GEOSITE,!CN
-    - GEOSITE,CN
   nameserver:
     - https://120.53.53.53/dns-query
     - https://223.5.5.5/dns-query
