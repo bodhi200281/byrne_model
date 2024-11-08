@@ -88,6 +88,7 @@ rules:
   - GEOSITE,openai,🇺🇸 美国
   - GEOSITE,google-gemini,🇺🇸 美国
   - DOMAIN-KEYWORD,claude,🇺🇸 美国
+  - DOMAIN,notebooklm.google.com,🇺🇸 美国
   - GEOSITE,google,🇭🇰 香港
   - GEOSITE,github,🇯🇵 日本
   - GEOSITE,twitter,🇹🇼 台湾
