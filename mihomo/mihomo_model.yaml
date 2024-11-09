@@ -78,6 +78,85 @@ proxy-groups:
 rules:
   - GEOIP,category-ads,REJECT,no-resolve
   - GEOSITE,category-ads-all,DIRECT
+  - DOMAIN-KEYWORD,notebooklm,🇺🇸 美国
+  - DOMAIN-KEYWORD,colabD,🇺🇸 美国
+  - DOMAIN-KEYWORD,play-fe,🇺🇸 美国
+  - DOMAIN-KEYWORD,clients4,🇺🇸 美国
+  - DOMAIN-KEYWORD,clients6,🇺🇸 美国
+  - DOMAIN-KEYWORD,mtalk,🇺🇸 美国
+  - DOMAIN-KEYWORD,developerprofiles,🇺🇸 美国
+  - DOMAIN-KEYWORD,generativelanguage,🇺🇸 美国
+  - DOMAIN,bard.google.com,🇺🇸 美国
+  - DOMAIN,ai.google.dev,🇺🇸 美国
+  - DOMAIN,o33249.ingest.sentry.io @ads,🇺🇸 美国
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,🇺🇸 美国
+  - DOMAIN,openaicom.imgix.net @ads,🇺🇸 美国
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,🇺🇸 美国
+  - DOMAIN,production-openaicom-storage.azureedge.net,🇺🇸 美国
+  - DOMAIN,alkalicore-pa.clients6.google.com,🇺🇸 美国
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com,🇺🇸 美国
+  - DOMAIN,waa-pa.clients6.google.com,🇺🇸 美国
+  - DOMAIN,alt3-mtalk.google.com,🇺🇸 美国
+  - DOMAIN,mtalk.google.com,🇺🇸 美国
+  - DOMAIN,redirector.c.play.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,charlestonroadregistry.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,crr.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.app,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.dev,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.how,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.new,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.page,🇺🇸 美国
+  - DOMAIN-SUFFIX,get.rsvp,🇺🇸 美国
+  - DOMAIN-SUFFIX,hey.boo,🇺🇸 美国
+  - DOMAIN-SUFFIX,iam.soy,🇺🇸 美国
+  - DOMAIN-SUFFIX,new.day,🇺🇸 美国
+  - DOMAIN-SUFFIX,registry.google,🇺🇸 美国
+  - DOMAIN-SUFFIX,xn--p8j9a0d9c9a.xn--q9jyb4c,🇺🇸 美国
+  - DOMAIN-SUFFIX,play-games.googleusercontent.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,play-lh.googleusercontent.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,play-fe.googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,googleplay.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,play.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,play.googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,services.googleapis.cn,🇺🇸 美国
+  - DOMAIN-SUFFIX,xn–ngstr-cn-8za9o.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,googleusercontent.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,clients.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,AI.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net,🇺🇸 美国
+  - DOMAIN-SUFFIX,auth0.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🇺🇸 美国
+  - DOMAIN-SUFFIX,challenges.cloudflare.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,opendns.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,bing.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,copilot.microsoft.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,openai.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,civitai.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,deepmind.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,deepmind.google,🇺🇸 美国
+  - DOMAIN-SUFFIX,geller-pa.googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,makersuite.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,gemini.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,generativeai.google,🇺🇸 美国
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,apis.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,googleapis.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,sentry.io,🇺🇸 美国
+  - DOMAIN-SUFFIX,intercom.io,🇺🇸 美国
+  - DOMAIN-SUFFIX,featuregates.org,🇺🇸 美国
+  - DOMAIN-SUFFIX,statsigapi.net,🇺🇸 美国
+  - DOMAIN-SUFFIX,claude.ai,🇺🇸 美国
+  - DOMAIN-SUFFIX,Anthropic.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,opera-api.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,aistudio.google.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,ciciai.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,chatgpt.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,oaiusercontent.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,oaistatic.com,🇺🇸 美国
+  - DOMAIN-SUFFIX,stripe.com,🇺🇸 美国
   - DOMAIN,www.binance.com,🇸🇬 新加坡
   - DOMAIN,bin.bnbstatic.com,🇸🇬 新加坡
   - DOMAIN,public.bnbstatic.com,🇸🇬 新加坡
@@ -85,12 +164,9 @@ rules:
   - DOMAIN-SUFFIX,binance.com,🇸🇬 新加坡
   - DOMAIN-SUFFIX,binance.info,🇸🇬 新加坡
   - DOMAIN-SUFFIX,anthropic.com,🇺🇸 美国
-  - DOMAIN-KEYWORD,claude,🇺🇸 美国
   - GEOSITE,google-registry,🇺🇸 美国
   - GEOSITE,openai,🇺🇸 美国
   - GEOSITE,google-gemini,🇺🇸 美国
-  - DOMAIN-KEYWORD,claude,🇺🇸 美国
-  - DOMAIN,notebooklm.google.com,🇺🇸 美国
   - GEOSITE,youtube,🇭🇰 香港
   - GEOSITE,google,🇯🇵 日本
   - GEOSITE,github,🇯🇵 日本
@@ -109,4 +185,4 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers: 
-
+  ai: { <<: *domain_text, url: "https://ghp.ci/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.list" }
