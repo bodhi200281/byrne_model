@@ -66,7 +66,7 @@ dns:
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🇺🇸 美国, 🇯🇵 日本, 🇸🇬 新加坡, 🇭🇰 香港, 🇹🇼 台湾, ⚖️ 负载均衡, DIRECT]}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连|特殊|购物)).)*$"}
   - {name: 🇯🇵 日本, type: load-balance, include-all: true, filter: "(?i)日本|jp|japan"}
   - {name: 🇺🇸 美国, type: load-balance, include-all: true, filter: "(?i)美国|us|unitedstates|united states"}
   - {name: 🇸🇬 新加坡, type: load-balance, include-all: true, filter: "(?i)狮城|sg|singapore|新加坡|新"}
@@ -106,4 +106,4 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers: 
-  sg: { <<: *domain_text, url: "https://ghp.ci//https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
+
