@@ -84,11 +84,14 @@ rules:
   - DOMAIN-SUFFIX,bnbstatic.com,🇸🇬 新加坡
   - DOMAIN-SUFFIX,binance.com,🇸🇬 新加坡
   - DOMAIN-SUFFIX,binance.info,🇸🇬 新加坡
+  - DOMAIN-SUFFIX,anthropic.com,🇺🇸 美国
+  - DOMAIN-KEYWORD,claude,🇺🇸 美国
   - GEOSITE,google-registry,🇺🇸 美国
   - GEOSITE,openai,🇺🇸 美国
   - GEOSITE,google-gemini,🇺🇸 美国
   - DOMAIN-KEYWORD,claude,🇺🇸 美国
   - DOMAIN,notebooklm.google.com,🇺🇸 美国
+  - GEOSITE,youtube,🇭🇰 香港
   - GEOSITE,google,🇯🇵 日本
   - GEOSITE,github,🇯🇵 日本
   - GEOSITE,twitter,🇹🇼 台湾
