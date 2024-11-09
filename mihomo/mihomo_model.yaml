@@ -78,7 +78,6 @@ proxy-groups:
 rules:
   - GEOIP,category-ads,REJECT,no-resolve
   - GEOSITE,category-ads-all,DIRECT
-  - RULE-SET,ai,🇺🇸 美国
   - DOMAIN,www.binance.com,🇸🇬 新加坡
   - DOMAIN,bin.bnbstatic.com,🇸🇬 新加坡
   - DOMAIN,public.bnbstatic.com,🇸🇬 新加坡
@@ -90,7 +89,7 @@ rules:
   - GEOSITE,google-gemini,🇺🇸 美国
   - DOMAIN-KEYWORD,claude,🇺🇸 美国
   - DOMAIN,notebooklm.google.com,🇺🇸 美国
-  - GEOSITE,google,🇭🇰 香港
+  - GEOSITE,google,🇯🇵 日本
   - GEOSITE,github,🇯🇵 日本
   - GEOSITE,twitter,🇹🇼 台湾
   - GEOSITE,microsoft,🇹🇼 台湾
@@ -108,4 +107,3 @@ rule-anchor:
 
 rule-providers: 
   sg: { <<: *domain_text, url: "https://ghp.ci//https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
-  ai: {<<: *domain_text, url: "https://ghp.ci/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.list"}
