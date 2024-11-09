@@ -78,6 +78,7 @@ proxy-groups:
 rules:
   - GEOIP,category-ads,REJECT,no-resolve
   - GEOSITE,category-ads-all,DIRECT
+  - RULE-SET,ai,🇺🇸 美国
   - DOMAIN,www.binance.com,🇸🇬 新加坡
   - DOMAIN,bin.bnbstatic.com,🇸🇬 新加坡
   - DOMAIN,public.bnbstatic.com,🇸🇬 新加坡
@@ -106,4 +107,5 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers: 
-  sg: { <<: *domain_text, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
+  sg: { <<: *domain_text, url: "https://ghp.ci//https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/sg_mihomo.list" }
+  ai: {<<: *domain_text, url: "https://ghp.ci/https://raw.githubusercontent.com/bodhi200281/byrne_model/refs/heads/main/rules/meta/geosite/openai.list"}
